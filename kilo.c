@@ -164,7 +164,7 @@ void editorRefreshScreen() {
 
 
 /*** input ***/
-void editorMoveCursor(char key) {
+void editorMoveCursor(int key) {
   switch (key) {
     case ARROW_LEFT:
       E.cx--;
@@ -181,7 +181,7 @@ void editorMoveCursor(char key) {
   }
 }
 void editorProcessKeypress() {
-  char c = editorReadKey();
+  int c = editorReadKey();
   switch (c) {
     case CTRL_KEY('q'):
       write(STDOUT_FILENO, "\x1b[2J", 4);
