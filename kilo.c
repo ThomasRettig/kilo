@@ -275,6 +275,7 @@ void initEditor() {
 int main() {
   enableRawMode();
   initEditor();
+  editorOpen();
   while (1) {
     editorRefreshScreen();
     editorProcessKeypress();
